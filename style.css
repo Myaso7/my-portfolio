@@ -1,16 +1,22 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background: #f4f4f9;
+    background: #f9f9f9;
     color: #333;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
 }
 
 header {
     background: #4CAF50;
     color: white;
     text-align: center;
-    padding: 2rem 1rem;
+    padding: 3rem 1rem;
 }
 
 header h1 {
@@ -20,38 +26,61 @@ header h1 {
 
 header p {
     margin: 0.5rem 0 0;
-}
-
-section {
-    padding: 2rem 1rem;
+    font-size: 1.2rem;
 }
 
 section h2 {
     color: #4CAF50;
+    margin-bottom: 1rem;
 }
 
-.projects ul {
-    list-style: none;
-    padding: 0;
+.projects .project-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
-.projects li {
-    margin: 0.5rem 0;
+.card {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    flex: 1 1 250px;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.projects a {
-    color: #333;
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background: #4CAF50;
+    color: white;
     text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: border-bottom 0.3s;
+    border-radius: 5px;
+    transition: background 0.3s;
 }
 
-.projects a:hover {
-    border-bottom: 1px solid #4CAF50;
+.card a:hover {
+    background: #45a049;
+}
+
+.contact a {
+    color: #4CAF50;
+    text-decoration: none;
 }
 
 footer {
     text-align: center;
     padding: 1rem;
     background: #ddd;
+    margin-top: 2rem;
 }
